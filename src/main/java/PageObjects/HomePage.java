@@ -9,12 +9,13 @@ import com.DemoWeb.Utils.PageActions;
 
 
 
-public class HomePage extends PageActions
+public class HomePage extends BasePage
 
 {
 	WebDriver driver;
 	public HomePage(WebDriver driver)
 	{
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

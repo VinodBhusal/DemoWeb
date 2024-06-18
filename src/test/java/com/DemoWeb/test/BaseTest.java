@@ -2,6 +2,7 @@ package com.DemoWeb.test;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,9 +10,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeMethod;
 
+import com.DemoWeb.Utils.TestProperties;
+
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
-import PageObjects.Vinod;
+
 
 
 
@@ -21,18 +24,20 @@ public class BaseTest {
 	@BeforeMethod 
 	 public void initialiseDriver() throws IOException { 
 	  // @Parameters({"BrowserName"}) 
-//	  Properties  prop =TestProperties.getProperties(); 
-//	  String browser =prop.getProperty("browserName"); 
+  Properties  prop =TestProperties.getProperties(); 
+  String browserName =prop.getProperty("browserName"); 
 		
-		String browser = "chrome";
-	  if (browser.equalsIgnoreCase("chrome")) { 
+  String env= prop.getProperty("Envrionment");
+  String URL=prop.getProperty(env);
+  System.out.println("Executing in : "+env);
+	  if (browserName.equalsIgnoreCase("chrome")) { 
 	   driver = new ChromeDriver(); 
 	 
-	  } else if (browser.equalsIgnoreCase("edge")) { 
+	  } else if (browserName.equalsIgnoreCase("edge")) { 
 	   driver = new EdgeDriver(); 
 	  } 
 	 
-	  else if (browser.equalsIgnoreCase("firefox")) { 
+	  else if (browserName.equalsIgnoreCase("firefox")) { 
 	   driver = new FirefoxDriver(); 
 	  } else { 
 	   System.out.println("Not a valid browser"); 
@@ -41,7 +46,7 @@ public class BaseTest {
 	  driver.manage().window().maximize(); 
 	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); 
 	  // driver.get(URL); 
-	  driver.get("https://demowebshop.tricentis.com/"); 
+	  driver.get(URL); 
 	 
 	  initPages(); 
 	 }
