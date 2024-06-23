@@ -9,7 +9,7 @@ public class UniqueGenerator {
 		 } 
 		  
 		 public static String getCurrentDateTime() { 
-		  String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime()); 
+		  String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime() ); 
 		  return timeStamp; 
 		 } 
 		  

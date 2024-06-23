@@ -29,7 +29,7 @@ public class LoginPage extends BasePage
 	private WebElement username;
 
 	@FindBy(id = "Password")
-	private WebElement Password;
+	private WebElement password;
 
 	@FindBy(css = ".button-1.login-button")
 	private WebElement Submitbtn;
@@ -45,12 +45,12 @@ public class LoginPage extends BasePage
 		clickElement(LoginBtn);
 	}
 
-	public String Login() {
+	public String Login(String emailID, String Password) {
 		clickElement(username);
-		setTextBox(username, "obsqura24@gmail.com");
-		setTextBox(Password, "mypassword");
+		setTextBox(username, emailID);
+		setTextBox(password, Password);
 		clickElement(Submitbtn);
-		return "obsqura24@gmail.com";
+		return emailID;
 	}
 
 	public String LoginEmailFetch() {

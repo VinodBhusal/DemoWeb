@@ -69,8 +69,6 @@ public class PageActions
 
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		// driver.manage().timeouts()element.(Duration.ofSeconds(5));
-		// driver.wait(12, 1);.wait(Duration.ofSeconds(0, 0));
 		wait.until(ExpectedConditions.visibilityOfAllElements(element));
 
 	}

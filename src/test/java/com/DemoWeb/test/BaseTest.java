@@ -8,12 +8,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.DemoWeb.Utils.TestProperties;
 
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
+import PageObjects.RegistrationPage;
 
 
 
@@ -53,16 +55,16 @@ public class BaseTest {
 
 	public LoginPage LP;
 	public HomePage HP;
-
+	public RegistrationPage RP;
 	public void initPages() {
 
 		LP = new LoginPage(driver);
 		HP = new HomePage(driver);
+		RP = new RegistrationPage(driver);
 		
-		
-		
-	
-		
-
-	}
+			
+			}
+			
+	  @AfterMethod(alwaysRun=true) public void tearDown() { driver.quit(); }
+			 
 }

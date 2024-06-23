@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-19T00:29:29 IST" name="Default suite" finished-at="2024-06-19T00:29:36 IST" duration-ms="6597">
+  <suite started-at="2024-06-23T19:05:28 IST" name="Default suite" finished-at="2024-06-23T19:05:48 IST" duration-ms="20622">
     <groups>
     </groups>
-    <test started-at="2024-06-19T00:29:29 IST" name="Default test" finished-at="2024-06-19T00:29:36 IST" duration-ms="6597">
-      <class name="com.DemoWeb.test.LoginTest">
-        <test-method is-config="true" signature="initialiseDriver()[pri:0, instance:com.DemoWeb.test.LoginTest@52b1beb6]" started-at="2024-06-19T00:29:29 IST" name="initialiseDriver" finished-at="2024-06-19T00:29:36 IST" duration-ms="6330" status="PASS">
+    <test started-at="2024-06-23T19:05:28 IST" name="Default test" finished-at="2024-06-23T19:05:48 IST" duration-ms="20622">
+      <class name="com.DemoWeb.test.DataDrivenRegistration">
+        <test-method is-config="true" signature="initialiseDriver()[pri:0, instance:com.DemoWeb.test.DataDrivenRegistration@6fdbe764]" started-at="2024-06-23T19:05:28 IST" name="initialiseDriver" finished-at="2024-06-23T19:05:32 IST" duration-ms="4296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseDriver -->
-        <test-method signature="verifyHeaderList()[pri:0, instance:com.DemoWeb.test.LoginTest@52b1beb6]" started-at="2024-06-19T00:29:36 IST" name="verifyHeaderList" finished-at="2024-06-19T00:29:36 IST" duration-ms="165" status="PASS">
+        <test-method signature="verifyUserisAbleToRegisterMultipleUrsers()[pri:0, instance:com.DemoWeb.test.DataDrivenRegistration@6fdbe764]" started-at="2024-06-23T19:05:32 IST" name="verifyUserisAbleToRegisterMultipleUrsers" finished-at="2024-06-23T19:05:48 IST" duration-ms="15942" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHeaderList -->
-      </class> <!-- com.DemoWeb.test.LoginTest -->
+        </test-method> <!-- verifyUserisAbleToRegisterMultipleUrsers -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.DemoWeb.test.DataDrivenRegistration@6fdbe764]" started-at="2024-06-23T19:05:48 IST" name="tearDown" finished-at="2024-06-23T19:05:48 IST" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.DemoWeb.test.DataDrivenRegistration -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
